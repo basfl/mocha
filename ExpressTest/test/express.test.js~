@@ -20,7 +20,7 @@ describe("express",function(){
 //	        done();
 //	       
 //	      });
-		request(app).get("/name").expect('babak', done);
+		request(app).get("/name").expect('name', done);
 		
 	});
 	

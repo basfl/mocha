@@ -8,7 +8,7 @@ var app=require("../app");
 //var uri = 'http://localhost:3000';
 
 describe("express",function(){
-	it("should return name babak",function(done){
+	it("should return name is name ",function(done){
 //		request(app)
 //	      .get("/name")
 //	      .end(function(err, res) {
