@@ -1,0 +1,44 @@
+/**
+ * http://usejsdoc.org/
+ */
+var expect = require('chai').expect;
+var request = require('supertest');
+//var app=require("../controllers/expressApp");
+var app=require("../app");
+//var uri = 'http://localhost:3000';
+
+describe("express",function(){
+	it("should return name babak",function(done){
+//		request(app)
+//	      .get("/name")
+//	      .end(function(err, res) {
+//	  //     expect(res.body.version).to.be.ok;
+//	    	  var result=res.body;
+//	 	       expect(res.statusCode).to.equal(200);
+//	        obj={};
+//	        expect(result).to.equal(obj);
+//	        done();
+//	       
+//	      });
+		request(app).get("/name").expect('babak', done);
+		
+	});
+	
+});
+
+describe("endpoint",function(){
+	it("should return status 200",function(done){
+		request(app)
+	      .get("/name")
+	      .end(function(err, res) {
+	  //     expect(res.body.version).to.be.ok;
+	    	  var result=res.body;
+	 	       expect(res.statusCode).to.equal(200);
+	       
+	        done();
+	       
+	      });
+		
+});
+	
+});
